@@ -39,6 +39,6 @@ private class HelloWorldModelConfig extends StatelessModelConfig
 {
 	override public function configure() : Void
 	{
-		this.mapModel( IHelloWorldModel, HelloWorldModel );
+		this.map( IHelloWorldModel, HelloWorldModel );
 	}
 }

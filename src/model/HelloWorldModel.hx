@@ -1,11 +1,12 @@
 package model;
-import hex.model.Model;
+
+import hex.model.BasicModel;
 import hex.model.ModelDispatcher;
 /**
  * ...
  * @author Petya
  */
-class HelloWorldModel extends Model<HelloWorldModelDispatcher, IHelloWorldModelListener> implements IHelloWorldModel
+class HelloWorldModel extends BasicModel<HelloWorldModelDispatcher, IHelloWorldModelListener> implements IHelloWorldModel
 {
 	public function new() 
 	{
