@@ -6686,19 +6686,19 @@ hex_metadata__$AnnotationProvider_InstanceVO.__name__ = ["hex","metadata","_Anno
 hex_metadata__$AnnotationProvider_InstanceVO.prototype = {
 	__class__: hex_metadata__$AnnotationProvider_InstanceVO
 };
-var hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener = function() {
-	this.dispatcher = new model__$HelloWorldModel_HelloWorldModelDispatcher();
+var hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener = function() {
+	this.dispatcher = new module_model__$HelloWorldModel_HelloWorldModelDispatcher();
 };
-$hxClasses["hex.model.BasicModel_model__HelloWorldModel_HelloWorldModelDispatcher_model_IHelloWorldModelListener"] = hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener;
-hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener.__name__ = ["hex","model","BasicModel_model__HelloWorldModel_HelloWorldModelDispatcher_model_IHelloWorldModelListener"];
-hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener.prototype = {
+$hxClasses["hex.model.BasicModel_module_model__HelloWorldModel_HelloWorldModelDispatcher_module_model_IHelloWorldModelListener"] = hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener;
+hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener.__name__ = ["hex","model","BasicModel_module_model__HelloWorldModel_HelloWorldModelDispatcher_module_model_IHelloWorldModelListener"];
+hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener.prototype = {
 	addListener: function(listener) {
 		this.dispatcher.addListener(listener);
 	}
 	,removeListener: function(listener) {
 		this.dispatcher.removeListener(listener);
 	}
-	,__class__: hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener
+	,__class__: hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener
 };
 var hex_model_IModelRO = function() { };
 $hxClasses["hex.model.IModelRO"] = hex_model_IModelRO;
@@ -6706,11 +6706,11 @@ hex_model_IModelRO.__name__ = ["hex","model","IModelRO"];
 hex_model_IModelRO.prototype = {
 	__class__: hex_model_IModelRO
 };
-var hex_model_IModelRO_$model_$IHelloWorldModelListener = function() { };
-$hxClasses["hex.model.IModelRO_model_IHelloWorldModelListener"] = hex_model_IModelRO_$model_$IHelloWorldModelListener;
-hex_model_IModelRO_$model_$IHelloWorldModelListener.__name__ = ["hex","model","IModelRO_model_IHelloWorldModelListener"];
-hex_model_IModelRO_$model_$IHelloWorldModelListener.prototype = {
-	__class__: hex_model_IModelRO_$model_$IHelloWorldModelListener
+var hex_model_IModelRO_$module_$model_$IHelloWorldModelListener = function() { };
+$hxClasses["hex.model.IModelRO_module_model_IHelloWorldModelListener"] = hex_model_IModelRO_$module_$model_$IHelloWorldModelListener;
+hex_model_IModelRO_$module_$model_$IHelloWorldModelListener.__name__ = ["hex","model","IModelRO_module_model_IHelloWorldModelListener"];
+hex_model_IModelRO_$module_$model_$IHelloWorldModelListener.prototype = {
+	__class__: hex_model_IModelRO_$module_$model_$IHelloWorldModelListener
 };
 var hex_model_ModelDispatcher = function() {
 	this._listeners = [];
@@ -7732,36 +7732,15 @@ js__$Boot_HaxeError.__super__ = Error;
 js__$Boot_HaxeError.prototype = $extend(Error.prototype,{
 	__class__: js__$Boot_HaxeError
 });
-var model_IHelloWorldModelRO = function() { };
-$hxClasses["model.IHelloWorldModelRO"] = model_IHelloWorldModelRO;
-model_IHelloWorldModelRO.__name__ = ["model","IHelloWorldModelRO"];
-model_IHelloWorldModelRO.__interfaces__ = [hex_model_IModelRO_$model_$IHelloWorldModelListener];
-var model_IHelloWorldModel = function() { };
-$hxClasses["model.IHelloWorldModel"] = model_IHelloWorldModel;
-model_IHelloWorldModel.__name__ = ["model","IHelloWorldModel"];
-model_IHelloWorldModel.__interfaces__ = [model_IHelloWorldModelRO];
-var model_HelloWorldModel = function() {
-	hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener.call(this);
+var js_view_HelloWorld = function(layout) {
+	hex_view_BasicView.call(this);
+	layout.appendChild(new Text("Hello World!"));
 };
-$hxClasses["model.HelloWorldModel"] = model_HelloWorldModel;
-model_HelloWorldModel.__name__ = ["model","HelloWorldModel"];
-model_HelloWorldModel.__interfaces__ = [model_IHelloWorldModel];
-model_HelloWorldModel.__super__ = hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener;
-model_HelloWorldModel.prototype = $extend(hex_model_BasicModel_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$model_$IHelloWorldModelListener.prototype,{
-	__class__: model_HelloWorldModel
-});
-var model_IHelloWorldModelListener = function() { };
-$hxClasses["model.IHelloWorldModelListener"] = model_IHelloWorldModelListener;
-model_IHelloWorldModelListener.__name__ = ["model","IHelloWorldModelListener"];
-var model__$HelloWorldModel_HelloWorldModelDispatcher = function() {
-	hex_model_ModelDispatcher.call(this);
-};
-$hxClasses["model._HelloWorldModel.HelloWorldModelDispatcher"] = model__$HelloWorldModel_HelloWorldModelDispatcher;
-model__$HelloWorldModel_HelloWorldModelDispatcher.__name__ = ["model","_HelloWorldModel","HelloWorldModelDispatcher"];
-model__$HelloWorldModel_HelloWorldModelDispatcher.__interfaces__ = [model_IHelloWorldModelListener];
-model__$HelloWorldModel_HelloWorldModelDispatcher.__super__ = hex_model_ModelDispatcher;
-model__$HelloWorldModel_HelloWorldModelDispatcher.prototype = $extend(hex_model_ModelDispatcher.prototype,{
-	__class__: model__$HelloWorldModel_HelloWorldModelDispatcher
+$hxClasses["js.view.HelloWorld"] = js_view_HelloWorld;
+js_view_HelloWorld.__name__ = ["js","view","HelloWorld"];
+js_view_HelloWorld.__super__ = hex_view_BasicView;
+js_view_HelloWorld.prototype = $extend(hex_view_BasicView.prototype,{
+	__class__: js_view_HelloWorld
 });
 var module_IHelloWorldModule = function() { };
 $hxClasses["module.IHelloWorldModule"] = module_IHelloWorldModule;
@@ -7777,7 +7756,7 @@ module_HelloWorldModule.__interfaces__ = [module_IHelloWorldModule];
 module_HelloWorldModule.__super__ = hex_module_Module;
 module_HelloWorldModule.prototype = $extend(hex_module_Module.prototype,{
 	buildView: function() {
-		this.buildViewHelper(view_HelloWorldViewHelper,new view_HelloWorldJS(window.document.querySelector(".infoField")));
+		this.buildViewHelper(module_view_HelloWorldViewHelper,new js_view_HelloWorld(window.document.querySelector(".infoField")));
 	}
 	,__class__: module_HelloWorldModule
 });
@@ -7800,36 +7779,57 @@ module__$HelloWorldModule_HelloWorldModelConfig.__name__ = ["module","_HelloWorl
 module__$HelloWorldModule_HelloWorldModelConfig.__super__ = hex_config_stateless_StatelessModelConfig;
 module__$HelloWorldModule_HelloWorldModelConfig.prototype = $extend(hex_config_stateless_StatelessModelConfig.prototype,{
 	configure: function() {
-		this.map(model_IHelloWorldModel,model_HelloWorldModel);
+		this.map(module_model_IHelloWorldModel,module_model_HelloWorldModel);
 	}
 	,__class__: module__$HelloWorldModule_HelloWorldModelConfig
 });
-var view_HelloWorldJS = function(layout) {
-	hex_view_BasicView.call(this);
-	layout.appendChild(new Text("Hello World!"));
+var module_model_IHelloWorldModelRO = function() { };
+$hxClasses["module.model.IHelloWorldModelRO"] = module_model_IHelloWorldModelRO;
+module_model_IHelloWorldModelRO.__name__ = ["module","model","IHelloWorldModelRO"];
+module_model_IHelloWorldModelRO.__interfaces__ = [hex_model_IModelRO_$module_$model_$IHelloWorldModelListener];
+var module_model_IHelloWorldModel = function() { };
+$hxClasses["module.model.IHelloWorldModel"] = module_model_IHelloWorldModel;
+module_model_IHelloWorldModel.__name__ = ["module","model","IHelloWorldModel"];
+module_model_IHelloWorldModel.__interfaces__ = [module_model_IHelloWorldModelRO];
+var module_model_HelloWorldModel = function() {
+	hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener.call(this);
 };
-$hxClasses["view.HelloWorldJS"] = view_HelloWorldJS;
-view_HelloWorldJS.__name__ = ["view","HelloWorldJS"];
-view_HelloWorldJS.__super__ = hex_view_BasicView;
-view_HelloWorldJS.prototype = $extend(hex_view_BasicView.prototype,{
-	__class__: view_HelloWorldJS
+$hxClasses["module.model.HelloWorldModel"] = module_model_HelloWorldModel;
+module_model_HelloWorldModel.__name__ = ["module","model","HelloWorldModel"];
+module_model_HelloWorldModel.__interfaces__ = [module_model_IHelloWorldModel];
+module_model_HelloWorldModel.__super__ = hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener;
+module_model_HelloWorldModel.prototype = $extend(hex_model_BasicModel_$module_$model_$_$HelloWorldModel_$HelloWorldModelDispatcher_$module_$model_$IHelloWorldModelListener.prototype,{
+	__class__: module_model_HelloWorldModel
 });
-var view_HelloWorldViewHelper = function() {
+var module_model_IHelloWorldModelListener = function() { };
+$hxClasses["module.model.IHelloWorldModelListener"] = module_model_IHelloWorldModelListener;
+module_model_IHelloWorldModelListener.__name__ = ["module","model","IHelloWorldModelListener"];
+var module_model__$HelloWorldModel_HelloWorldModelDispatcher = function() {
+	hex_model_ModelDispatcher.call(this);
+};
+$hxClasses["module.model._HelloWorldModel.HelloWorldModelDispatcher"] = module_model__$HelloWorldModel_HelloWorldModelDispatcher;
+module_model__$HelloWorldModel_HelloWorldModelDispatcher.__name__ = ["module","model","_HelloWorldModel","HelloWorldModelDispatcher"];
+module_model__$HelloWorldModel_HelloWorldModelDispatcher.__interfaces__ = [module_model_IHelloWorldModelListener];
+module_model__$HelloWorldModel_HelloWorldModelDispatcher.__super__ = hex_model_ModelDispatcher;
+module_model__$HelloWorldModel_HelloWorldModelDispatcher.prototype = $extend(hex_model_ModelDispatcher.prototype,{
+	__class__: module_model__$HelloWorldModel_HelloWorldModelDispatcher
+});
+var module_view_HelloWorldViewHelper = function() {
 	hex_view_viewhelper_ViewHelper.call(this);
 };
-$hxClasses["view.HelloWorldViewHelper"] = view_HelloWorldViewHelper;
-view_HelloWorldViewHelper.__name__ = ["view","HelloWorldViewHelper"];
-view_HelloWorldViewHelper.__super__ = hex_view_viewhelper_ViewHelper;
-view_HelloWorldViewHelper.prototype = $extend(hex_view_viewhelper_ViewHelper.prototype,{
+$hxClasses["module.view.HelloWorldViewHelper"] = module_view_HelloWorldViewHelper;
+module_view_HelloWorldViewHelper.__name__ = ["module","view","HelloWorldViewHelper"];
+module_view_HelloWorldViewHelper.__super__ = hex_view_viewhelper_ViewHelper;
+module_view_HelloWorldViewHelper.prototype = $extend(hex_view_viewhelper_ViewHelper.prototype,{
 	_initialize: function() {
 		hex_view_viewhelper_ViewHelper.prototype._initialize.call(this);
 	}
-	,__class__: view_HelloWorldViewHelper
+	,__class__: module_view_HelloWorldViewHelper
 });
-var view_IHelloWorldJS = function() { };
-$hxClasses["view.IHelloWorldJS"] = view_IHelloWorldJS;
-view_IHelloWorldJS.__name__ = ["view","IHelloWorldJS"];
-view_IHelloWorldJS.__interfaces__ = [hex_view_IView];
+var module_view_IHelloWorld = function() { };
+$hxClasses["module.view.IHelloWorld"] = module_view_IHelloWorld;
+module_view_IHelloWorld.__name__ = ["module","view","IHelloWorld"];
+module_view_IHelloWorld.__interfaces__ = [hex_view_IView];
 function $iterator(o) { if( o instanceof Array ) return function() { return HxOverrides.iter(o); }; return typeof(o.iterator) == 'function' ? $bind(o,o.iterator) : o.iterator; }
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
@@ -7971,9 +7971,9 @@ hex_view_viewhelper_ViewHelperMessage.INIT = new hex_event_MessageType("onInit")
 hex_view_viewhelper_ViewHelperMessage.RELEASE = new hex_event_MessageType("onRelease");
 hex_view_viewhelper_ViewHelperMessage.ATTACH_VIEW = new hex_event_MessageType("onAttachView");
 hex_view_viewhelper_ViewHelperMessage.REMOVE_VIEW = new hex_event_MessageType("onRemoveView");
+js_view_HelloWorld.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [], methods : [], postConstruct : [], preDestroy : []};
 module__$HelloWorldModule_HelloWorldCommandConfig.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [{ propertyName : "frontController", propertyType : hex_control_IFrontController, injectionName : "", isOptional : false}], methods : [], postConstruct : [], preDestroy : []};
 module__$HelloWorldModule_HelloWorldModelConfig.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [{ propertyName : "injector", propertyType : hex_di_IDependencyInjector, injectionName : "", isOptional : false}], methods : [], postConstruct : [], preDestroy : []};
-view_HelloWorldJS.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [], methods : [], postConstruct : [], preDestroy : []};
-view_HelloWorldViewHelper.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [{ propertyName : "dispatcher", propertyType : hex_event_IDispatcher, injectionName : "", isOptional : false}], methods : [], postConstruct : [], preDestroy : []};
+module_view_HelloWorldViewHelper.__INJECTION_DATA = { constructorInjection : { methodName : "new", args : []}, properties : [{ propertyName : "dispatcher", propertyType : hex_event_IDispatcher, injectionName : "", isOptional : false}], methods : [], postConstruct : [], preDestroy : []};
 Main.main();
 })(typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);

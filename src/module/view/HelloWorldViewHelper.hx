@@ -1,4 +1,4 @@
-package view;
+package module.view;
 
 import hex.view.viewhelper.ViewHelper;
 
@@ -6,7 +6,7 @@ import hex.view.viewhelper.ViewHelper;
  * ...
  * @author Petya
  */
-class HelloWorldViewHelper extends ViewHelper<IHelloWorldJS>
+class HelloWorldViewHelper extends ViewHelper<IHelloWorld>
 {
 
 	public function new() 

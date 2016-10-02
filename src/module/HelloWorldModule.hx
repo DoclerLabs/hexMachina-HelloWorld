@@ -1,9 +1,9 @@
 package module;
 
 import hex.module.Module;
-import model.HelloWorldModel;
-import model.IHelloWorldModel;
-import view.HelloWorldViewHelper;
+import module.model.HelloWorldModel;
+import module.model.IHelloWorldModel;
+import module.view.HelloWorldViewHelper;
 import hex.config.stateless.StatelessModelConfig;
 import hex.config.stateless.StatelessCommandConfig;
 
@@ -23,7 +23,7 @@ class HelloWorldModule extends Module implements IHelloWorldModule
 	
 	function buildView() : Void
 	{
-		this.buildViewHelper( HelloWorldViewHelper, new view.HelloWorldJS( js.Browser.document.querySelector( ".infoField" ) ) );
+		this.buildViewHelper( HelloWorldViewHelper, new js.view.HelloWorld( js.Browser.document.querySelector( ".infoField" ) ) );
 	}
 }
 

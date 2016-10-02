@@ -1,6 +1,6 @@
-package model;
+package module.model;
 
-import model.IHelloWorldModelRO;
+import module.model.IHelloWorldModelRO;
 
 /**
  * ...

@@ -1,4 +1,4 @@
-package view;
+package js.view;
 
 import js.html.Text;
 import hex.view.BasicView;
@@ -8,7 +8,7 @@ import js.html.DOMElement;
  * ...
  * @author Petya
  */
-class HelloWorldJS extends BasicView
+class HelloWorld extends BasicView
 {	
 	public function new( layout : DOMElement ) 
 	{

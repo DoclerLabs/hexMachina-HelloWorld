@@ -1,4 +1,4 @@
-package model;
+package module.model;
 
 import hex.model.BasicModel;
 import hex.model.ModelDispatcher;
