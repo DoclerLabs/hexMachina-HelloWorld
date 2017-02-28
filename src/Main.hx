@@ -17,7 +17,7 @@ class Main
 	
 	public function new()
 	{
-		XmlCompiler.readXmlFile( "configuration/context.xml" );
+		XmlCompiler.compile( "configuration/context.xml" );
 	}
 	
 }
