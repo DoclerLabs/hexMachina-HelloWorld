@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data name="helloWorld">
-<!-- MODULES -->
-	<module id="hw" type="module.HelloWorldModule">
+	
+	<module id="module" type="module.HelloWorldModule">
+		<argument ref="view" />
 	</module>
+	
+	<view if="js" id="view" type="js.HelloWorldView" />
+	<view if="neko" id="view" type="neko.HelloWorldView"/>
+	
 </data>

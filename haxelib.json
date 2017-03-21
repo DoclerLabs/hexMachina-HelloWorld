@@ -1,0 +1,15 @@
+{
+  "name": "helloWorld",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["hexmachina", "mvc", "example"],
+  "description": "simple example to showcase basic application",
+  "contributors": ["doclerlabs"],
+  "releasenote": "",
+  "version": "git",
+  "url": "https://github.com/DoclerLabs/helloWorld",
+  "dependencies": 
+  {
+	"hexmachina": "0.19.0"
+  }
+}

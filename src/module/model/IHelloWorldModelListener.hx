@@ -6,6 +6,5 @@ package module.model;
  */
 interface IHelloWorldModelListener
 {
-
-	
+	function onMessage( message : String ) : Void;
 }

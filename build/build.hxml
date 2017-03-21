@@ -1,3 +1,4 @@
 -cp ./src
 -lib hexmachina
 -main Main
+-neko bin/helloWorld.n

@@ -1,23 +1,21 @@
 package module.model;
+import hex.event.ITrigger;
 
-import hex.model.BasicModel;
-import hex.model.ModelDispatcher;
 /**
  * ...
  * @author Petya
  */
-class HelloWorldModel extends BasicModel<HelloWorldModelDispatcher, IHelloWorldModelListener> implements IHelloWorldModel
+class HelloWorldModel implements IHelloWorldModel
 {
+	public var listeners ( default, never ) : ITrigger<IHelloWorldModelListener>;
+	
 	public function new() 
 	{
-		super();
+		
 	}
-}
 
-private class HelloWorldModelDispatcher extends ModelDispatcher<IHelloWorldModelListener> implements IHelloWorldModelListener
-{
-	public function new() 
+	public function setMessage( message : String ) : Void 
 	{
-		super();
+		this.listeners.onMessage( message );
 	}
 }

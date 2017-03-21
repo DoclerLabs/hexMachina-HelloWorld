@@ -1,44 +1,29 @@
 package module;
 
-import hex.module.Module;
+import hex.module.ContextModule;
+import module.control.HelloWorldController;
+import module.control.IHelloWorldController;
 import module.model.HelloWorldModel;
 import module.model.IHelloWorldModel;
-import module.view.HelloWorldViewHelper;
-import hex.config.stateless.StatelessModelConfig;
-import hex.config.stateless.StatelessCommandConfig;
 
 /**
  * ...
  * @author Petya
  */
-class HelloWorldModule extends Module implements IHelloWorldModule
+class HelloWorldModule extends ContextModule
 {
-
-	public function new() 
+	public function new( view ) 
 	{
 		super();
-		this._addStatelessConfigClasses( [ HelloWorldCommandConfig, HelloWorldModelConfig ] );
-		this.buildView();
+
+		this._map( IHelloWorldController, HelloWorldController, '', true );
+		this._map( IHelloWorldModel, HelloWorldModel, '', true );
+
+		this._get( IHelloWorldModel ).listeners.connect( view );
 	}
 	
-	function buildView() : Void
+	override function _onInitialisation() : Void 
 	{
-		this.buildViewHelper( HelloWorldViewHelper, new js.view.HelloWorld( js.Browser.document.querySelector( ".infoField" ) ) );
-	}
-}
-
-private class HelloWorldCommandConfig extends StatelessCommandConfig
-{
-	override public function configure():Void
-	{
-		
-	}
-}
-
-private class HelloWorldModelConfig extends StatelessModelConfig
-{
-	override public function configure() : Void
-	{
-		this.map( IHelloWorldModel, HelloWorldModel );
+		this._get( IHelloWorldController ).sayHello( 'world' );
 	}
 }
