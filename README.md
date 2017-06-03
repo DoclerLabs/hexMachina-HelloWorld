@@ -5,7 +5,7 @@ Find more information about hexMachina on [hexmachina.org](http://hexmachina.org
 0. [install Haxe](http://haxe.org/download/) minimum support Haxe 3.4
 1. download or clone git project `git clone https://github.com/DoclerLabs/hexMachina-HelloWorld.git`
 2. in folder `cd hexMachina-HelloWorld`
-3. install hexMachina framework with haxelib, locally in folder project`haxelib newrepo && haxelib install haxelib.json`
+3. install hexMachina framework with haxelib, locally in .haxelib folder `haxelib newrepo && haxelib install haxelib.json`
 4. Compile JavaScript target with [HXML](http://haxe.org/manual/compiler-usage-hxml.html) `haxe build/build-js.hxml`
 5. Open index.html file in the bin folder to see the result of your build: 'Hello World'!
 
@@ -22,32 +22,24 @@ Find more information about hexMachina on [hexmachina.org](http://hexmachina.org
 The project can compile in Javascript, Flash, PHP and Neko targets. 
 ### Neko
 ```bash
-#compile
-haxe build/build-neko.hxml
-#run
-neko bin/helloWorld.n
+# compile and run
+haxe build/build-neko.hxml && neko bin/helloWorld.n
 ```
 ### PHP
 ```bash
-#compile
-haxe build/build-php.hxml
-#run on Mac or Linux
-php bin/helloWorld-php/index.php
+# compile and run on Mac or Linux
+haxe build/build-php.hxml && php bin/helloWorld-php/index.php
 ```
 ### JS
 ```bash
-#compile
-haxe build/build-js.hxml
-#run
-open bin/index.html
+# compile and run
+haxe build/build-js.hxml && open bin/index.html
 ```
 
 ### Flash
 ```bash
-#compile
-haxe build/build-flash.hxml
-#run
-open bin/helloWorld.swf
+# compile and run
+haxe build/build-flash.hxml && open bin/helloWorld.swf
 ```
 
 ## What happen ?
