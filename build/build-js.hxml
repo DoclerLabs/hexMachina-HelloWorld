@@ -1,6 +1,5 @@
--cp ./src
--lib hexmachina
--main Main
+build/build.hxml
+
 -js bin/helloWorld.js
 
 # set conditional var use in DSL to select view target

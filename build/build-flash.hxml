@@ -1,6 +1,5 @@
--cp ./src
--lib hexmachina
--main Main
+build/build.hxml
+
 -swf bin/helloWorld.swf
 -swf-version 15 
 -swf-header 960:640:60:f68712

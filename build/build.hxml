@@ -1,0 +1,5 @@
+-cp src
+
+-lib hexmachina:0.22.0
+
+-main Main

@@ -5,7 +5,7 @@ Find more information about hexMachina on [hexmachina.org](http://hexmachina.org
 0. [install Haxe](http://haxe.org/download/) minimum support Haxe 3.4
 1. download or clone git project `git clone https://github.com/DoclerLabs/hexMachina-HelloWorld.git`
 2. in folder `cd hexMachina-HelloWorld`
-3. install hexMachina framework with haxelib, locally in .haxelib folder `haxelib newrepo && haxelib install haxelib.json`
+3. install hexMachina framework with haxelib, locally in .haxelib folder `haxelib newrepo && haxelib install build/build.hxml`
 4. Compile JavaScript target with [HXML](http://haxe.org/manual/compiler-usage-hxml.html) `haxe build/build-js.hxml`
 5. Open index.html file in the bin folder to see the result of your build: 'Hello World'!
 

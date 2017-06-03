@@ -1,6 +1,5 @@
--cp ./src
--lib hexmachina
--main Main
+build/build.hxml
+
 -php bin/helloWorld-php
 
 # set conditional var use in DSL to select view target
