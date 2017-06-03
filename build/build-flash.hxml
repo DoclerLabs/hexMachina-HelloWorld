@@ -1,0 +1,12 @@
+-cp ./src
+-lib hexmachina
+-main Main
+-swf bin/helloWorld.swf
+-swf-version 15 
+-swf-header 960:640:60:f68712
+
+# set conditional var use in DSL to select view target
+-D target-js=0
+-D target-neko=0
+-D target-php=0
+-D target-flash

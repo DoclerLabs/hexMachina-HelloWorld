@@ -1,5 +1,8 @@
 package;
 
+import hex.compiletime.xml.BasicStaticXmlCompiler;
+import hex.runtime.ApplicationAssembler;
+
 /**
  * ...
  * @author Petya
@@ -8,6 +11,9 @@ class Main
 {
 	public static function main()
 	{
-		hex.compiletime.xml.BasicXmlCompiler.compile( "configuration/context.xml", null, ['js'=>false] );
+		// convert XML DSL to haxe code by Macro
+		var code = BasicStaticXmlCompiler.compile( new ApplicationAssembler(), "configuration/context.xml" );
+		// run code
+		code.execute();
 	}
 }

@@ -1,13 +1,9 @@
-package js;
+package flash;
 
-import js.Browser;
-import js.html.Text;
+import flash.Lib;
+import flash.text.TextField;
 import module.model.IHelloWorldModelListener;
 
-/**
- * ...
- * @author Petya
- */
 class HelloWorldView implements IHelloWorldModelListener
 {	
 	public function new() {}
@@ -15,6 +11,9 @@ class HelloWorldView implements IHelloWorldModelListener
 	public function onMessage( message : String ) : Void
 	{
 		trace( message );
-		Browser.document.body.appendChild( new Text( message ) );
+		var stage = Lib.current.stage;
+		var tf = new TextField();
+		tf.text = message;
+		stage.addChild( tf );
 	}
 }

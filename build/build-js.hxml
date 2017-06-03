@@ -1,0 +1,10 @@
+-cp ./src
+-lib hexmachina
+-main Main
+-js bin/helloWorld.js
+
+# set conditional var use in DSL to select view target
+-D target-js
+-D target-neko=false
+-D target-php=false
+-D target-flash=false

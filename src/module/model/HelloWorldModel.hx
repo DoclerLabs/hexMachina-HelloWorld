@@ -8,11 +8,8 @@ import hex.event.ITrigger;
 class HelloWorldModel implements IHelloWorldModel
 {
 	public var listeners ( default, never ) : ITrigger<IHelloWorldModelListener>;
-	
-	public function new() 
-	{
-		
-	}
+
+	public function new() {}
 
 	public function setMessage( message : String ) : Void 
 	{

@@ -12,6 +12,7 @@ class HelloWorldView implements IHelloWorldModelListener
 	
 	public function onMessage( message : String ) : Void
 	{
+		trace( message );
 		neko.Lib.print( message );
 	}
 }
